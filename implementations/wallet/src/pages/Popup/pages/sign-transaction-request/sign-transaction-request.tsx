@@ -73,65 +73,72 @@ const SignTransactionConfirmation = ({
   const [paymasterUrl, setPaymasterUrl] = useState<string>('');
   const backgroundDispatch = useBackgroundDispatch();
 
-  const addPaymasterForWorldCoin = useCallback(async (credential: any) => {
-    console.log('addPaymasterForWorldCoin');
+  const addPaymasterForWorldCoin = useCallback(
+    async (credential: any) => {
+      console.log('addPaymasterForWorldCoin');
 
-    const signal = "0x50f4c3dD6958a9f8267dA4Ded7446632F5C28D4f"
+      const signal = '0x50f4c3dD6958a9f8267dA4Ded7446632F5C28D4f';
 
-    const proofHexString = credential.proof.slice(2)
-    const chunkSize = proofHexString.length / 8;
-    const proofChunks = [];
-    for (let i = 0; i < proofHexString.length; i += chunkSize) {
-      proofChunks.push(proofHexString.slice(i, i + chunkSize));
-    }
-    const proof = proofChunks.map((chunk) => ethers.BigNumber.from("0x" + chunk));
-    const worldcoinData = ethers.utils.defaultAbiCoder.encode(
-      ["address", "uint256", "uint256", "uint256[8]"],
-      [signal, credential.merkle_root, credential.nullifier_hash, proof]
-    );
-    const data = ethers.utils.defaultAbiCoder.encode(
-      ["uint8", "bytes"],
-      [0, worldcoinData]
-    );
+      const proofHexString = credential.proof.slice(2);
+      const chunkSize = proofHexString.length / 8;
+      const proofChunks = [];
+      for (let i = 0; i < proofHexString.length; i += chunkSize) {
+        proofChunks.push(proofHexString.slice(i, i + chunkSize));
+      }
+      const proof = proofChunks.map((chunk) =>
+        ethers.BigNumber.from('0x' + chunk)
+      );
+      const worldcoinData = ethers.utils.defaultAbiCoder.encode(
+        ['address', 'uint256', 'uint256', 'uint256[8]'],
+        [signal, credential.merkle_root, credential.nullifier_hash, proof]
+      );
+      const data = ethers.utils.defaultAbiCoder.encode(
+        ['uint8', 'bytes'],
+        [0, worldcoinData]
+      );
 
-    // const simplePaymaster = "0x333153c3B1180070E1CC0c77a910D96061d9B553"
-    const paymasterAddress = "0x396DC1582617bc24A38500DCE88D844BC1ab13e8"
-    const paymasterAndData = "0x" + paymasterAddress.replace("0x", "") + data.replace("0x", "");
-    console.log("paymasterAndData", paymasterAndData)
-    console.log("worldcoinData", worldcoinData)
-    backgroundDispatch(
-      setUnsignedUserOperation({
-      ...userOp,
-      paymasterAndData,
-      preVerificationGas: 1000000,
-      verificationGasLimit: 1000000,
-    }))
+      // const simplePaymaster = "0x333153c3B1180070E1CC0c77a910D96061d9B553"
+      const paymasterAddress = '0x396DC1582617bc24A38500DCE88D844BC1ab13e8';
+      const paymasterAndData =
+        '0x' + paymasterAddress.replace('0x', '') + data.replace('0x', '');
+      console.log('paymasterAndData', paymasterAndData);
+      console.log('worldcoinData', worldcoinData);
+      backgroundDispatch(
+        setUnsignedUserOperation({
+          ...userOp,
+          paymasterAndData,
+          preVerificationGas: 1000000,
+          verificationGasLimit: 1000000,
+        })
+      );
 
-    // setAddPaymasterLoader(true);
-    // if (paymasterUrl) {
-    //   const paymasterRPC = new ethers.providers.JsonRpcProvider(paymasterUrl, {
-    //     name: 'Paymaster',
-    //     chainId: parseInt(activeNetwork.chainID),
-    //   });
-    //   try {
-    //     const paymasterResp = await paymasterRPC.send(
-    //       'eth_getPaymasterAndDataSize',
-    //       [userOp]
-    //     );
-    //     backgroundDispatch(
-    //       setUnsignedUserOperation({
-    //         ...userOp,
-    //         paymasterAndData: paymasterResp,
-    //         verificationGasLimit: paymasterResp.verificationGasLimit,
-    //       })
-    //     );
-    //   } catch (e) {
-    //     console.log(e);
-    //     setPaymasterError('Paymaster url returned error');
-    //   }
-    //   setAddPaymasterLoader(false);
-    // }
-  }, [activeNetwork.chainID, backgroundDispatch, credential, userOp]);
+      // setAddPaymasterLoader(true);
+      // if (paymasterUrl) {
+      //   const paymasterRPC = new ethers.providers.JsonRpcProvider(paymasterUrl, {
+      //     name: 'Paymaster',
+      //     chainId: parseInt(activeNetwork.chainID),
+      //   });
+      //   try {
+      //     const paymasterResp = await paymasterRPC.send(
+      //       'eth_getPaymasterAndDataSize',
+      //       [userOp]
+      //     );
+      //     backgroundDispatch(
+      //       setUnsignedUserOperation({
+      //         ...userOp,
+      //         paymasterAndData: paymasterResp,
+      //         verificationGasLimit: paymasterResp.verificationGasLimit,
+      //       })
+      //     );
+      //   } catch (e) {
+      //     console.log(e);
+      //     setPaymasterError('Paymaster url returned error');
+      //   }
+      //   setAddPaymasterLoader(false);
+      // }
+    },
+    [activeNetwork.chainID, backgroundDispatch, credential, userOp]
+  );
   // }, [activeNetwork.chainID, backgroundDispatch, paymasterUrl, userOp]);
 
   return (
@@ -145,14 +152,13 @@ const SignTransactionConfirmation = ({
         <AccountInfo activeAccount={activeAccount} accountInfo={accountInfo} />
       )}
       <Stack spacing={2} sx={{ position: 'relative', pt: 2, mb: 4 }}>
-        <OriginInfo permission={originPermission} />
         <Typography variant="h6" sx-={{ p: 2 }}>
           Attach Credential for Sponsored Tx
         </Typography>
         <Paper sx={{ p: 2 }}>
           <AuthWorldCoin
             onSuccess={(result) => {
-              addPaymasterForWorldCoin(result)
+              addPaymasterForWorldCoin(result);
             }}
           />
           <GetCredentialPolygonID />
