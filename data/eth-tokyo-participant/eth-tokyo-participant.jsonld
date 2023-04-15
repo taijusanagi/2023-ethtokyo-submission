@@ -6,13 +6,13 @@
             "id": "@id",
             "type": "@type",
             "EthTokyoParticipant": {
-                "@id": "https://raw.githubusercontent.com/taijusanagi/2023-ethtokyo-submission/fix/polygonid-schema/data/eth-tokyo-participant/eth-tokyo-participant.jsonld#EthTokyoParticipant",
+                "@id": "https://raw.githubusercontent.com/taijusanagi/2023-ethtokyo-submission/main/data/eth-tokyo-participant/eth-tokyo-participant.jsonld#EthTokyoParticipant",
                 "@context": {
                     "@version": 1.1,
                     "@protected": true,
                     "id": "@id",
                     "type": "@type",
-                    "vocab": "https://github.com/taijusanagi/2023-ethtokyo-submission/blob/fix/polygonid-schema/data/eth-tokyo-participant/eth-tokyo-participant.md#",
+                    "vocab": "https://github.com/taijusanagi/2023-ethtokyo-submission/blob/main/data/eth-tokyo-participant/eth-tokyo-participant.md#",
                     "xsd": "http://www.w3.org/2001/XMLSchema#",
                     "isAttended": {
                         "@id": "vocab:isAttended",

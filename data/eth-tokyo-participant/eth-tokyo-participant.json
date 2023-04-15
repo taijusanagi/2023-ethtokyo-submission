@@ -3,8 +3,8 @@
     "type": "object",
     "$metadata": {
         "uris": {
-            "jsonLdContext": "https://raw.githubusercontent.com/taijusanagi/2023-ethtokyo-submission/fix/polygonid-schema/data/eth-tokyo-participant/eth-tokyo-participant.jsonld",
-            "jsonSchema": "https://raw.githubusercontent.com/taijusanagi/2023-ethtokyo-submission/fix/polygonid-schema/data/eth-tokyo-participant/eth-tokyo-participant.json"
+            "jsonLdContext": "https://raw.githubusercontent.com/taijusanagi/2023-ethtokyo-submission/main/data/eth-tokyo-participant/eth-tokyo-participant.jsonld",
+            "jsonSchema": "https://raw.githubusercontent.com/taijusanagi/2023-ethtokyo-submission/main/data/eth-tokyo-participant/eth-tokyo-participant.json"
         }
     },
     "required": [
