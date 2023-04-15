@@ -21,25 +21,30 @@ const Transaction = ({
     <>
       <CardContent>
         <Typography variant="h3" gutterBottom>
-          Dummy Account Component
+          Grate Gas Grants
         </Typography>
-        <Typography variant="body1" color="text.secondary">
-          You can show as many steps as you want in this dummy component. You
-          need to call the function <b>onComplete</b> passed as a props to this
-          component. <br />
-          <br />
-          The function takes a modifiedTransactions & context as a parameter,
-          the context will be passed to your AccountApi when creating a new
-          account. While modifiedTransactions will be agreed upon by the user.
-          <br />
-          This Component is defined in exported in{' '}
+        <Typography
+          textAlign="justify"
+          variant="body1"
+          color="text.secondary"
+          gutterBottom
+        >
+          Grate Gas Grants is an innovative credential-based gas grants service
+          that leverages the power of Account Abstraction Paymaster to provide
+          users with access to gas grants based on their credentials.
         </Typography>
-        <Typography variant="caption">
-          trampoline/src/pages/Account/components/transaction/index.ts
+        <Typography variant="h4">How it works</Typography>
+        <Typography textAlign="justify" variant="body1" color="text.secondary">
+          Grate Gas Grants is a groundbreaking service that allows users with
+          verified credentials to access gas grants and participate in various
+          on-chain activities without worrying about gas fees. By leveraging
+          PolygonID and Worldcoin for credential verification and enabling
+          sponsors to create gas grants, Grate Gas Grants ensures a seamless and
+          inclusive experience for users.
         </Typography>
       </CardContent>
-      <CardActions sx={{ pl: 4, pr: 4, width: '100%' }}>
-        <Stack spacing={2} sx={{ width: '100%' }}>
+      <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Stack spacing={2} sx={{ width: '100%', maxWidth: '15rem' }}>
           <Button
             disabled={loader}
             size="large"
