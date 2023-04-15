@@ -2,6 +2,13 @@
 
 Great Gas Grants is an innovative, credential-based gas grants service that harnesses the power of the Account Abstraction Paymaster to provide users with access to gas grants tailored to their credentials.
 
+## Demo
+A YouTube video will be uploaded soon.
+
+## App
+We have not deployed a live app for the demo, as it requires the installation of a custom browser extension and running a local bundler.
+The implementation details for the wallet and bundler can be found here.
+
 ## Description
 
 Great Gas Grants offers an innovative solution for funding gas fees, powered by our new Account Abstraction Paymaster with credential-based verification. Now, it's easier than ever for community members to join the Web3 ecosystem.
