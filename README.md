@@ -2,7 +2,7 @@
 
 Great Gas Grants is an innovative, credential-based gas grants service that harnesses the power of the Account Abstraction Paymaster to provide users with access to gas grants tailored to their credentials.
 
-![how it works](./docs/img/banner.png)
+![how it works](./docs/img/key.png)
 
 ## Demo
 
