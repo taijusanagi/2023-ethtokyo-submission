@@ -25,13 +25,13 @@ const ShowPolygonIDQR = () => {
           query: {
             allowedIssuers: ['*'],
             context:
-              'https://raw.githubusercontent.com/iden3/claim-schema-vocab/main/schemas/json-ld/kyc-v3.json-ld',
+              'https://raw.githubusercontent.com/taijusanagi/2023-ethtokyo-submission/main/data/eth-tokyo-participant/eth-tokyo-participant.jsonld',
             credentialSubject: {
-              birthday: {
-                $lt: 20020101,
+              isAttended: {
+                $eq: true,
               },
             },
-            type: 'KYCAgeCredential',
+            type: 'EthTokyoParticipant',
           },
         },
       ],
