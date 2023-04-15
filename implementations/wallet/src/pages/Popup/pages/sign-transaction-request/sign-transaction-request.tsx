@@ -147,12 +147,9 @@ const SignTransactionConfirmation = ({
       <Stack spacing={2} sx={{ position: 'relative', pt: 2, mb: 4 }}>
         <OriginInfo permission={originPermission} />
         <Typography variant="h6" sx-={{ p: 2 }}>
-          Attach Credential
+          Attach Credential for Sponsored Tx
         </Typography>
         <Paper sx={{ p: 2 }}>
-          // Task for Masaki. 1. ask user to add credential from worldcoin /
-          polygon ID 2. get credential 3. set credential in state via
-          setCredential
           <AuthWorldCoin
             onSuccess={(result) => {
               addPaymasterForWorldCoin(result)

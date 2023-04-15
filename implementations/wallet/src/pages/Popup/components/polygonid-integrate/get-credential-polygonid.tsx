@@ -1,8 +1,24 @@
 import React from 'react';
-import { Button } from '@mui/material';
 import { QRCode } from 'react-qr-svg';
+import { Button } from '@mui/material';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
 
-const ShowPolygonIDQR = () => {
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  boxShadow: 24,
+  p: 4,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
+const PolygonIDQR = () => {
   const deployedContractAddress = '0x8689BFaF640410fF9bc0F79b8a864C337CA587bc';
 
   const qrProofRequestJson = {
@@ -46,17 +62,31 @@ const ShowPolygonIDQR = () => {
     />
   );
 };
+
 const GetCredentialPolygonID = () => {
   const [isShow, setShow] = React.useState(false);
 
-  const handleClick = () => {
-    setShow(true);
-  };
+  const handleOpen = () => setShow(true);
+  const handleClose = () => setShow(false);
 
   return (
     <>
-      <Button onClick={handleClick}>Get PolygonID Credential</Button>
-      {isShow && <ShowPolygonIDQR />}
+      <Button onClick={handleOpen}>Polygon ID Credential</Button>
+      <Modal
+        open={isShow}
+        onClose={handleClose}
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'white' }}
+      > 
+        <Box sx={style}>
+          <h2 id="simple-modal-title">ETHTokyo Participants</h2>
+          <PolygonIDQR />
+          <Button variant="contained" color="secondary" onClick={handleClose} style={{ marginTop: '16px' }}>
+            Close Modal
+          </Button>
+        </Box>
+      </Modal>
     </>
   );
 };

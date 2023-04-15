@@ -35,7 +35,7 @@ const AuthWorldCoin = ({ onSuccess }: AuthWorldCoinProps) => {
       credential_types={credential_types}
       // walletConnectProjectId="get_this_from_walletconnect_portal"
     >
-      {({ open }) => <Button onClick={open}>Verify your human</Button>}
+      {({ open }) => <Button onClick={open}>Verify you're human</Button>}
     </IDKitWidget>
   );
 };
