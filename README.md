@@ -11,6 +11,7 @@ A YouTube video will be uploaded soon.
 ## App
 
 We have not deployed a live app for the demo, as it requires the installation of a custom browser extension and running a local bundler.
+
 The implementation details for the wallet and bundler can be found [here](./docs/account-abstraction.md).
 
 ## Description
@@ -30,7 +31,6 @@ Our platform is Sybil attack-resistant and utilizes the Account Abstraction Paym
 
 ![how it works](./docs/img/how-it-works.jpg)
 
-
 ### Credential-Based Account Abstraction Paymaster
 Our platform utilizes a custom Account Abstraction Paymaster to verify user credentials on-chain. Once the credentials are successfully confirmed, the smart contract sponsors the transaction, allowing only eligible users to benefit from the gas grants.
 
@@ -38,10 +38,10 @@ We have adopted the ERC4337 0.5.0 smart contract standard and bundler for effici
 
 The implementation details can be found [here](./docs/account-abstraction.md).
 
-### Polygon ID and Worldcoin for Credential Services
+#### Polygon ID and Worldcoin for Credential Services
 Great Gas Grants integrates both Polygon ID and Worldcoin as credential services to verify user eligibility, ensuring privacy and security for users' data.
 
-#### Worldcoin 
+##### Worldcoin 
 
 Great Gas Grants employs Worldcoin to confirm that users are human and not bots, adding a layer of Sybil resistance. This approach prevents individuals from creating multiple accounts to access the same grants repeatedly, upholding fairness and equal opportunity for all eligible users on the platform.
 
@@ -49,7 +49,7 @@ The platform has integrated the 'Sign in with Worldcoin' feature for user authen
 
 The implementation details can be found [here](./docs/worldcoin.md).
 
-#### PolygonID
+##### PolygonID
 
 Great Gas Grants utilizes Polygon ID to generate ETHTokyo Participant credentials, allowing community members to create grants for all attending hackers. This enables participants to benefit from sponsored Account Abstraction (AA) transactions through Polygon ID. The platform integrates custom credential issuance and verification within the frontend and wallet for a seamless user experience.
 
