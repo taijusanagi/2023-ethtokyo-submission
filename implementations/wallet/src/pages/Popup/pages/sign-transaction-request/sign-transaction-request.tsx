@@ -1,4 +1,5 @@
 import { UserOperationStruct } from '@account-abstraction/contracts';
+
 import {
   Box,
   Button,
@@ -39,6 +40,7 @@ import { EthersTransactionRequest } from '../../../Background/services/types';
 import AccountInfo from '../../components/account-info';
 import OriginInfo from '../../components/origin-info';
 import Config from '../../../../exconfig';
+import AuthWorldCoin from '../../components/worldcoin-integrate/auth-worldcoin';
 
 const SignTransactionComponent =
   AccountImplementations[ActiveAccountImplementation].Transaction;
@@ -71,7 +73,7 @@ const SignTransactionConfirmation = ({
   const backgroundDispatch = useBackgroundDispatch();
 
   const addPaymaster = useCallback(async () => {
-    console.log(credential);
+    console.log('console paymaster: ' + credential);
     // Task for Taiju
     // Add paymaster and data using the credential, then attached to the user operation
 
@@ -118,10 +120,15 @@ const SignTransactionConfirmation = ({
           Attach Credential
         </Typography>
         <Paper sx={{ p: 2 }}>
-          // Task for Masaki
-          1. ask user to add credential from worldcoin / polygon ID
-          2. get credential
-          3. set credential in state via setCredential
+          // Task for Masaki. 1. ask user to add credential from worldcoin /
+          polygon ID 2. get credential 3. set credential in state via
+          setCredential
+          <AuthWorldCoin
+            onSuccess={(result) => {
+              setCredential(result);
+              console.log('console.log onSuccess: ' + result);
+            }}
+          />
         </Paper>
         {/* {!showAddPaymasterUI && (
           <Paper sx={{ p: 2 }}>
