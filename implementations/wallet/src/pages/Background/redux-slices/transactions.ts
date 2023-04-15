@@ -196,8 +196,11 @@ export const createUnsignedUserOp = createBackgroundAsyncThunk(
     if (transactionRequest) {
       const userOp = await keyringService.createUnsignedUserOp(
         address,
-        transactionRequest
+        transactionRequest,
       );
+      // this is very simple test
+      // userOp.paymasterAndData = "0x333153c3B1180070E1CC0c77a910D96061d9B553"
+      // userOp.preVerificationGas = "100000"
       dispatch(setUnsignedUserOperation(userOp));
     }
   }
