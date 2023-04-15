@@ -6,7 +6,7 @@ Great Gas Grants is an innovative, credential-based gas grants service that harn
 
 ## Demo
 
-A YouTube video will be uploaded soon.
+https://youtu.be/TwZwlqzBeAc
 
 ## App
 
