@@ -4,7 +4,7 @@
     "$metadata": {
         "uris": {
             "jsonLdContext": "https://raw.githubusercontent.com/0xPolygonID/tutorial-examples/main/credential-schema/proof-of-dao-longevity.jsonld",
-            "jsonSchema": "https://raw.githubusercontent.com/0xPolygonID/tutorial-examples/main/credential-schema/proof-of-dao-longevity.json"
+            "jsonSchema": "https://raw.githubusercontent.com/taijusanagi/2023-ethtokyo-submission/polygonid/custom-chema/data/custom-schema.json"
         }
     },
     "required": [
