@@ -41,6 +41,7 @@ import AccountInfo from '../../components/account-info';
 import OriginInfo from '../../components/origin-info';
 import Config from '../../../../exconfig';
 import AuthWorldCoin from '../../components/worldcoin-integrate/auth-worldcoin';
+import GetCredentialPolygonID from '../../components/polygonid-integrate';
 
 const SignTransactionComponent =
   AccountImplementations[ActiveAccountImplementation].Transaction;
@@ -129,6 +130,7 @@ const SignTransactionConfirmation = ({
               console.log('console.log onSuccess: ' + result);
             }}
           />
+          <GetCredentialPolygonID />
         </Paper>
         {/* {!showAddPaymasterUI && (
           <Paper sx={{ p: 2 }}>
