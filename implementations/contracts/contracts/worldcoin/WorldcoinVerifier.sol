@@ -52,7 +52,7 @@ contract WorldcoinVerifier {
         uint256[8] memory proof
     ) internal {
         // First, we make sure this person hasn't done this before
-        // if (nullifierHashes[nullifierHash]) revert InvalidNullifier();
+        if (nullifierHashes[nullifierHash]) revert InvalidNullifier();
 
         // We now verify the provided proof is valid and the user is verified by World ID
         // worldId.verifyProof(
@@ -66,7 +66,6 @@ contract WorldcoinVerifier {
 
         // We now record the user has done this, so they can't do it again (proof of uniqueness)
         nullifierHashes[nullifierHash] = true;
-
 
         // Finally, execute your logic here, for example issue a token, NFT, etc...
         // Make sure to emit some kind of event afterwards!
