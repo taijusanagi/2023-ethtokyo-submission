@@ -16,7 +16,7 @@
                     "xsd": "http://www.w3.org/2001/XMLSchema#",
                     "isAttended": {
                         "@id": "vocab:isAttended",
-                        "@type": "xsd:boolean"
+                        "@type": "xsd:integer"
                     }
                 }
             }

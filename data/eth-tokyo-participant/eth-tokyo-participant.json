@@ -89,7 +89,7 @@
                     "format": "uri"
                 },
                 "isAttended": {
-                    "type": "boolean"
+                    "type": "integer"
                 }
             }
         }

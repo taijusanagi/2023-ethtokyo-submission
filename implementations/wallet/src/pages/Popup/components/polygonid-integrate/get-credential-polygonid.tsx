@@ -44,7 +44,7 @@ const PolygonIDQR = () => {
               'https://raw.githubusercontent.com/taijusanagi/2023-ethtokyo-submission/main/data/eth-tokyo-participant/eth-tokyo-participant.jsonld',
             credentialSubject: {
               isAttended: {
-                $eq: true,
+                $eq: 1,
               },
             },
             type: 'EthTokyoParticipant',
@@ -77,12 +77,22 @@ const GetCredentialPolygonID = () => {
         onClose={handleClose}
         aria-labelledby="modal-title"
         aria-describedby="modal-description"
-        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'white' }}
-      > 
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: 'white',
+        }}
+      >
         <Box sx={style}>
           <h2 id="simple-modal-title">ETHTokyo Participants</h2>
           <PolygonIDQR />
-          <Button variant="contained" color="secondary" onClick={handleClose} style={{ marginTop: '16px' }}>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={handleClose}
+            style={{ marginTop: '16px' }}
+          >
             Close Modal
           </Button>
         </Box>
