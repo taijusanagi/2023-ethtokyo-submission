@@ -23,7 +23,7 @@ function Copyright(props) {
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
             <Link color="inherit" href="https://mui.com/">
-                Your Website
+                GGG
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -101,7 +101,7 @@ export default function GrantsList() {
             >
                 <Toolbar sx={{ flexWrap: 'wrap' }}>
                     <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-                        Secure Gas Grants
+                        Great Gas Grants
                     </Typography>
                     <nav>
                         <Link
@@ -143,7 +143,7 @@ export default function GrantsList() {
                     color="text.primary"
                     gutterBottom
                 >
-                    Secure Gas Grants
+                    Great Gas Grants
                 </Typography>
                 <Typography variant="h5" align="center" color="text.secondary" component="p">
                     Sponsor Gas Grants to your favourite community or cause.<br />
