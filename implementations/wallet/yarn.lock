@@ -4947,10 +4947,10 @@
   resolved "https://registry.yarnpkg.com/@webpack-cli/serve/-/serve-1.7.0.tgz#e1993689ac42d2b16e9194376cfb6753f6254db1"
   integrity sha512-oxnCNGj88fL+xzV+dacXs44HcDwf1ovs3AuEzvP7mqXw7fQntqIhQ1BRmynh4qEKQSSSRSWVyXRjmTbZIX9V2Q==
 
-"@worldcoin/idkit@^0.4.8":
-  version "0.4.8"
-  resolved "https://registry.yarnpkg.com/@worldcoin/idkit/-/idkit-0.4.8.tgz#c01fdc049f0dd10f9679b6f4b1a3381de8cf688e"
-  integrity sha512-W3WLFAFS7soHM8HDNiP4fs6mU6ju0XL71dPLuDLan7YnjPZ3yyHdmuLtqEkRY68B8oeu4VCY9PrVkQa1vtzBUQ==
+"@worldcoin/idkit@^0.4.9":
+  version "0.4.9"
+  resolved "https://registry.yarnpkg.com/@worldcoin/idkit/-/idkit-0.4.9.tgz#12b7a5b57cf2c74c3f082996502f0edb9f5e2804"
+  integrity sha512-fbRAXfB+DSvDLnKdqBu6AY4XeIoO8jnPvJe1gOSjxrXgM39zOTs6t7k1aivtr0rR0mVV6pCz36AIu+EwTL8s4A==
   dependencies:
     "@ethersproject/bytes" "^5.7.0"
     "@ethersproject/solidity" "^5.7.0"
@@ -12539,7 +12539,7 @@ promise@^8.0.0:
   dependencies:
     asap "~2.0.6"
 
-prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -12614,6 +12614,11 @@ qr-code-styling-new@^1.6.1:
   integrity sha512-SBhtLz2XzqMRrcWXc8RFcay0jI/bgUNyXe2upFvQWfDLcg/PKwtrBgCoov637uOnjSYkjglW4EcBdwLW3WsF3A==
   dependencies:
     qrcode-generator "^1.4.3"
+
+qr.js@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/qr.js/-/qr.js-0.0.0.tgz#cace86386f59a0db8050fa90d9b6b0e88a1e364f"
+  integrity sha512-c4iYnWb+k2E+vYpRimHqSu575b1/wKl4XFeJGpFmrJQz5I88v9aY2czh7s0w36srfCM1sXgC/xpoJz5dJfq+OQ==
 
 qrcode-generator@^1.4.3:
   version "1.4.4"
@@ -12835,6 +12840,14 @@ react-json-tree@^0.18.0:
     "@babel/runtime" "^7.20.6"
     "@types/lodash" "^4.14.191"
     react-base16-styling "^0.9.1"
+
+react-qr-svg@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-qr-svg/-/react-qr-svg-2.4.0.tgz#c703d95907b9713192730a5bbeffb57e4aa782bd"
+  integrity sha512-3Q/LyjBi+eWjJ0WyZvBzyY3rCMlUBZyRnbTcKbXQ39J1bd0/vgqYhXoYai7XlDTS42Ro50BBY4TmeUVyIZh+nA==
+  dependencies:
+    prop-types "^15.5.8"
+    qr.js "0.0.0"
 
 react-redux@^8.0.5:
   version "8.0.5"
