@@ -93,8 +93,8 @@ const SignTransactionConfirmation = ({
       [0, worldcoinData]
     );
 
-    const simplePaymaster = "0x333153c3B1180070E1CC0c77a910D96061d9B553"
-    const paymasterAddress = "0x442A03d9Ec893bC1B4b3B7CABA9abc13E5bf3562"
+    // const simplePaymaster = "0x333153c3B1180070E1CC0c77a910D96061d9B553"
+    const paymasterAddress = "0x396DC1582617bc24A38500DCE88D844BC1ab13e8"
     const paymasterAndData = "0x" + paymasterAddress.replace("0x", "") + data.replace("0x", "");
     console.log("paymasterAndData", paymasterAndData)
     console.log("worldcoinData", worldcoinData)

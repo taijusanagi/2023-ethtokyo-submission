@@ -11,7 +11,7 @@ export default {
     provider: 'https://polygon-mumbai.infura.io/v3/eedaad734dce46a4b08816a7f6df0b9b',
     entryPointAddress: '0x0576a174D229E3cFA37253523E645A78A0C91B57',
     bundler:
-      'https://node.stackup.sh/v1/rpc/bdaf63d7cd0180897fc9ec780edd1d408e4c406aaab1763a73b21b0b35ae4af9',
+      'http://localhost:3000/rpc',
     baseAsset: {
       symbol: 'ETH',
       name: 'ETH',
