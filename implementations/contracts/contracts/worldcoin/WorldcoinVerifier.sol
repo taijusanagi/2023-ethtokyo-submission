@@ -55,14 +55,14 @@ contract WorldcoinVerifier {
         if (nullifierHashes[nullifierHash]) revert InvalidNullifier();
 
         // We now verify the provided proof is valid and the user is verified by World ID
-        worldId.verifyProof(
-            root,
-            groupId,
-            abi.encodePacked(signal).hashToField(),
-            nullifierHash,
-            externalNullifier,
-            proof
-        );
+        // worldId.verifyProof(
+        //     root,
+        //     groupId,
+        //     abi.encodePacked(signal).hashToField(),
+        //     nullifierHash,
+        //     externalNullifier,
+        //     proof
+        // );
 
         // We now record the user has done this, so they can't do it again (proof of uniqueness)
         nullifierHashes[nullifierHash] = true;

@@ -23,12 +23,12 @@ const AuthWorldCoin = ({ onSuccess }: AuthWorldCoinProps) => {
   ];
 
   const action = urlParams.get('action') ?? '';
-  const app_id = 'app_staging_1a2f758112e36580288cc3fd679fa401';
+  const app_id = 'app_ef65ea5d4812926b8e06a76a2fcd1e98';
 
   return (
     <IDKitWidget
       action={action}
-      signal="my_signal"
+      signal="0x50f4c3dD6958a9f8267dA4Ded7446632F5C28D4f"
       onSuccess={onSuccess}
       handleVerify={handleProof}
       app_id={app_id}
