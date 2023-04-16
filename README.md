@@ -6,7 +6,7 @@ Great Gas Grants is an innovative, credential-based gas grants service that harn
 
 ## Demo
 
-A YouTube video will be uploaded soon.
+https://youtu.be/TwZwlqzBeAc
 
 ## App
 
@@ -31,17 +31,17 @@ Our platform is Sybil attack-resistant and utilizes the Account Abstraction Paym
 
 ![how it works](./docs/img/how-it-works.jpg)
 
-### Credential-Based Account Abstraction Paymaster
+## Credential-Based Account Abstraction Paymaster
 Our platform utilizes a custom Account Abstraction Paymaster to verify user credentials on-chain. Once the credentials are successfully confirmed, the smart contract sponsors the transaction, allowing only eligible users to benefit from the gas grants.
 
 We have adopted the ERC4337 0.5.0 smart contract standard and bundler for efficient transaction handling. To accelerate the wallet app's development, Great Gas Grants employed Trampolin, a widely-used quick-start solution.
 
 The implementation details can be found [here](./docs/account-abstraction.md).
 
-#### Polygon ID and Worldcoin for Credential Services
+## Polygon ID and Worldcoin for Credential Services
 Great Gas Grants integrates both Polygon ID and Worldcoin as credential services to verify user eligibility, ensuring privacy and security for users' data.
 
-##### Worldcoin 
+### Worldcoin 
 
 Great Gas Grants employs Worldcoin to confirm that users are human and not bots, adding a layer of Sybil resistance. This approach prevents individuals from creating multiple accounts to access the same grants repeatedly, upholding fairness and equal opportunity for all eligible users on the platform.
 
