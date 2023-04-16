@@ -1,4 +1,8 @@
 ## Lines of Code and Features
+
+### Tweet
+https://twitter.com/ookimaki_dev/status/1647449500783644672?s=20
+
 ### Show Custom PolygonID Issuing QRCode
 https://github.com/taijusanagi/2023-ethtokyo-submission/blob/main/frontend/src/Components/VerificationForm.js#L17
 
