@@ -49,7 +49,7 @@ The platform has integrated the 'Sign in with Worldcoin' feature for user authen
 
 The implementation details can be found [here](./docs/worldcoin.md).
 
-##### PolygonID
+### PolygonID
 
 Great Gas Grants utilizes Polygon ID to generate ETHTokyo Participant credentials, allowing community members to create grants for all attending hackers. This enables participants to benefit from sponsored Account Abstraction (AA) transactions through Polygon ID. The platform integrates custom credential issuance and verification within the frontend and wallet for a seamless user experience.
 
