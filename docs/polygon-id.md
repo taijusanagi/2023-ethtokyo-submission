@@ -21,6 +21,9 @@ https://mumbai.polygonscan.com/address/0x8689bfaf640410ff9bc0f79b8a864c337ca587b
 #### Transaction to Send Proof
 https://mumbai.polygonscan.com/tx/0x933b87b1596e5f250840cd6a3f65793a2d67e702f98cde3e59eb4bf997ffecce
 
+#### Scheme for Credential
+https://raw.githubusercontent.com/taijusanagi/2023-ethtokyo-submission/main/data/eth-tokyo-participant/eth-tokyo-participant.json
+
 ## Implemention Detail
 
 We have successfully created a custom PolygonID credential specifically for the ETHTokyo event. Additionally, we have implemented both issuing and verification processes within our app.
