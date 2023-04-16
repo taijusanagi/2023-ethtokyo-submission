@@ -41,14 +41,6 @@ The implementation details can be found [here](./docs/account-abstraction.md).
 ## Polygon ID and Worldcoin for Credential Services
 Great Gas Grants integrates both Polygon ID and Worldcoin as credential services to verify user eligibility, ensuring privacy and security for users' data.
 
-### Worldcoin 
-
-Great Gas Grants employs Worldcoin to confirm that users are human and not bots, adding a layer of Sybil resistance. This approach prevents individuals from creating multiple accounts to access the same grants repeatedly, upholding fairness and equal opportunity for all eligible users on the platform.
-
-The platform has integrated the 'Sign in with Worldcoin' feature for user authentication, streamlining the login process. Additionally, it incorporates on-chain verification within the paymaster smart contract, offering a secure and efficient method to verify credentials and manage gas grants for eligible users.
-
-The implementation details can be found [here](./docs/worldcoin.md).
-
 ### PolygonID
 
 Great Gas Grants utilizes Polygon ID to generate ETHTokyo Participant credentials, allowing community members to create grants for all attending hackers. This enables participants to benefit from sponsored Account Abstraction (AA) transactions through Polygon ID. The platform integrates custom credential issuance and verification within the frontend and wallet for a seamless user experience.
@@ -56,3 +48,11 @@ Great Gas Grants utilizes Polygon ID to generate ETHTokyo Participant credential
 While attempting to incorporate on-chain verification with the paymaster, the team faced challenges interacting with browser extension AA wallets due to Polygon ID app specifications.
 
 The implementation details can be found [here](./docs/polygon-id.md).
+
+### Worldcoin 
+
+Great Gas Grants employs Worldcoin to confirm that users are human and not bots, adding a layer of Sybil resistance. This approach prevents individuals from creating multiple accounts to access the same grants repeatedly, upholding fairness and equal opportunity for all eligible users on the platform.
+
+The platform has integrated the 'Sign in with Worldcoin' feature for user authentication, streamlining the login process. Additionally, it incorporates on-chain verification within the paymaster smart contract, offering a secure and efficient method to verify credentials and manage gas grants for eligible users.
+
+The implementation details can be found [here](./docs/worldcoin.md).
